@@ -1,0 +1,7 @@
+@mixin cover {
+  $color: red;
+  @for $i from 1 through 5 {
+    &.bg-cover#{$i} { background-color: adjust-hue($color, 15deg * $i) }
+  }
+}
+.wrapper { @include cover }
